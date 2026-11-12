@@ -1,0 +1,42 @@
+body{
+    background-color: chartreuse;
+    background: radial-gradient(yellow, red, blueviolet);
+}
+marquee{
+    color: blueviolet;
+    text-shadow: 0cm;
+    text-overflow: unset;
+}
+button{
+    color: rgba(27, 214, 10, 0.651);
+    scale: var(background-color);
+    background-color: rgb(52, 8, 247);
+    padding: 15px;
+}
+.flying-word {
+  position: absolute;
+  top: 40%;
+  font-size: 4rem;
+  font-weight: 900;
+  font-family: Arial, sans-serif;
+  color: #38bdf8;
+  text-shadow: 0 0 20px rgba(56, 189, 248, 0.7);
+  white-space: nowrap;
+  
+  /* The magic happens here */
+  animation: flyAcross 50s linear infinite;
+}
+
+@keyframes flyAcross {
+  0% {
+    transform: translateX(-10%) rotate(1deg);
+    left: 0;
+  }
+  50% {
+    transform: translateX(5vw) translateY(60px) rotate(5deg);
+  }
+  100% {
+    transform: translateX(100vw) rotate(5deg);
+    left: 100%;
+  }
+}
